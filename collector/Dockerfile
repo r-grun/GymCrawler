@@ -1,7 +1,6 @@
-FROM mongo:latest
+FROM python:3.10
 WORKDIR /app
-COPY ./src ./src
-RUN apt-get update && apt-get install -y python3 python3-pip
-WORKDIR /src
-RUN ["pip3", "install", "-r", "requirements.txt"]
-EXPOSE 27017
+COPY ./src .
+RUN pip3 install -r requirements.txt
+CMD ["python3", "collector.py"]
+EXPOSE 3000

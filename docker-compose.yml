@@ -1,0 +1,19 @@
+version: '3.7'
+
+services:
+  python:
+    build: ./collector
+    ports:
+        - 3000:3000
+    depends_on:
+      - mongodb
+  mongodb:
+    build: mongo:latest
+    container_name: mongodb
+    restart: always
+    env_file:
+      - .env
+    ports:
+        - 27017:27017
+    volumes:
+        - ./mongo/mongo-init.js:/docker-entrypoint-initdb.d/mongo-init.js:ro
