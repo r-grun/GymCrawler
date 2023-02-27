@@ -36,6 +36,7 @@ try:
             selected_gym_data = gym_data['centerId' == gym_id] 
 
             logging.info(f'{selected_gym_data}')
+            # save to mongo db in mongodb container
         else:
             logging.error(f'Error requesting gym data: {response.text}')
 
