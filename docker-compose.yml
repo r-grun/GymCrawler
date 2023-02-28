@@ -8,11 +8,10 @@ services:
     depends_on:
       - mongodb
   mongodb:
-    build: mongo:latest
+    image: mongo:latest
     container_name: mongodb
     restart: always
-    env_file:
-      - .env
+    env_file: .env
     ports:
         - 27017:27017
     volumes:
