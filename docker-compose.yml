@@ -3,11 +3,15 @@ version: '3.7'
 services:
   python:
     build: ./collector
+    container_name: datacrawler
+    env_file: .env
     ports:
         - 3000:3000
     depends_on:
-      - mongodb
-  mongodb:
+      - mongo
+    networks:
+      - python-mongo-net
+  mongo:
     image: mongo:latest
     container_name: mongodb
     restart: always
@@ -16,3 +20,9 @@ services:
         - 27017:27017
     volumes:
         - ./mongo/mongo-init.js:/docker-entrypoint-initdb.d/mongo-init.js:ro
+    networks:
+      - python-mongo-net
+
+networks:
+  python-mongo-net:
+    driver: bridge

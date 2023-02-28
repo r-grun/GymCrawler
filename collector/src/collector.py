@@ -2,6 +2,10 @@ import requests
 import json
 import time
 import logging
+import pymongo
+from datetime import datetime
+import traceback
+import os
 
 logPath = './logs/'
 fileName = 'collector.log'
@@ -26,8 +30,16 @@ headers = {
 }
 
 try:
-    logging.info(f'Program started for gym_id = {gym_id}.')
+    logging.info(f'Program started for gym_id = {gym_id}. Press CTRL+C to stop.')
     logging.info(f'Request URL: {url}.')
+
+    logging.info(f'Connecting to DB.')
+    mongo_client = pymongo.MongoClient(f"mongodb://{os.environ.get('MONGO_GYM_USERNAME')}:{os.environ.get('MONGO_GYM_PASSWORD')}@mongo:27017/gymDB", serverSelectionTimeoutMS = 15000)
+
+    logging.info(f'DB connected: {mongo_client.server_info()}')
+
+    mongo_database = mongo_client["gymDB"]
+    mongo_collection = mongo_database["checkin"]
 
     while True:
         response = requests.request("GET", url, headers=headers, data=payload)
@@ -35,13 +47,27 @@ try:
             gym_data = json.loads(response.text)
             selected_gym_data = gym_data['centerId' == gym_id] 
 
-            logging.info(f'{selected_gym_data}')
-            # save to mongo db in mongodb container
+            timestamp = datetime.now().isoformat()
+            selected_gym_data['timestamp'] = timestamp
+
+            logging.info(f'Saving to db: {selected_gym_data}')
+            inserted_data = mongo_collection.insert_one(selected_gym_data)
+            logging.info(f'Data inserted for ID: {inserted_data.inserted_id}')
         else:
             logging.error(f'Error requesting gym data: {response.text}')
 
         time.sleep(10)
-except KeyboardInterrupt:
-    logging.info('Program stopped.')
+except KeyError:
+    logging.info('Program stopped manually.')
+except pymongo.errors.ServerSelectionTimeoutError as err:
+    logging.error(f'DB connection error:')
+    logging.error(traceback.format_exc())
+except Exception:
+    logging.error(f'Program stopped due to following exception:')
+    logging.error(traceback.format_exc())
+finally:
+    mongo_client.close()
+    logging.info('Database client closed.')
+
 
 
