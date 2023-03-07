@@ -34,7 +34,7 @@ try:
     logging.info(f'Request URL: {url}.')
 
     logging.info(f'Connecting to DB.')
-    mongo_client = pymongo.MongoClient(f"mongodb://{os.environ.get('MONGO_GYM_USERNAME')}:{os.environ.get('MONGO_GYM_PASSWORD')}@mongo:27017/gymDB", serverSelectionTimeoutMS = 15000)
+    mongo_client = pymongo.MongoClient(f"mongodb://{os.environ.get('MONGO_GYM_USERNAME')}:{os.environ.get('MONGO_GYM_PASSWORD')}@mongo:27017/gymDB", serverSelectionTimeoutMS = 60000)
 
     logging.info(f'DB connected: {mongo_client.server_info()}')
 
