@@ -6,7 +6,7 @@ services:
     build: ./collector/.
     container_name: datacrawler
     env_file: .env
-    # restart: unless-stopped
+    restart: unless-stopped
     ports:
         - 3000:3000
     volumes:
@@ -22,7 +22,7 @@ services:
     networks:
       - python-mongo-net
   mongo:
-    image: mongo:latest
+    image: mongo:bionic
     container_name: mongodb
     restart: unless-stopped
     env_file: .env

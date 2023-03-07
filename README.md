@@ -4,7 +4,7 @@ This project collects check-in data over gyms, stores it and provides overview o
 ## Target architecture
 
 The project is made to be used as a server application.
-Thus, it uses depends on the [rgrun/gymcrawler-python](https://hub.docker.com/repository/docker/rgrun/gymcrawler-python/general) docker image which is prebuild for `linux/amd64` (e.g. Windows) and `linux/arm64/v8` (e.g. RaspberryPi).
+Thus, it depends on the [rgrun/gymcrawler-python](https://hub.docker.com/repository/docker/rgrun/gymcrawler-python/general) docker image which is prebuild for `linux/amd64` (e.g. Windows) and `linux/arm64/v8` (e.g. RaspberryPi).
 The `linux/arm64/v8` version is preselected but can be changed through changing the image tag in line `5` in the `docker-compose.yml` file.
 
 ```
