@@ -2,7 +2,7 @@
 set -e
 
 mongo <<EOF
-use admin 
+db = new Mongo().getDB("gymDB");
 db.createUser({
     user: "${MONGO_GYM_USERNAME}",
     pwd: "${MONGO_GYM_PASSWORD}",
@@ -13,8 +13,6 @@ db.createUser({
         },
     ],
 });
-
-use gymDB
 
 db.createCollection('checkin', {
     capped: false
