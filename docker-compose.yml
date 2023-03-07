@@ -9,6 +9,12 @@ services:
         - 3000:3000
     depends_on:
       - mongo
+    command: 
+      - /bin/sh
+      - -c
+      - |
+        wait
+        python3 collector.py
     networks:
       - python-mongo-net
   mongo:

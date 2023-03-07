@@ -21,7 +21,7 @@ logging.basicConfig(
 )
 
 # init script
-url = "https://teamxtrafit.de/application"
+url = "https://jolly-meadow-0b07c4c03.2.azurestaticapps.net/api/centers/capacity"
 gym_id = '320'
 
 payload={}
@@ -42,19 +42,25 @@ try:
     mongo_collection = mongo_database["checkin"]
 
     while True:
-        response = requests.request("GET", url, headers=headers, data=payload)
-        if(response.ok):
-            gym_data = json.loads(response.text)
-            selected_gym_data = gym_data['centerId' == gym_id] 
+        try:
+            response = requests.request("GET", url, headers=headers, data=payload)
+        
+            if(response.ok):
+                gym_data = json.loads(response.text)
+                selected_gym_data = gym_data['capacityInfos']['centerId' == gym_id] 
 
-            timestamp = datetime.now().isoformat()
-            selected_gym_data['timestamp'] = timestamp
+                timestamp = datetime.now().isoformat()
+                selected_gym_data['timestamp'] = timestamp
 
-            logging.info(f'Saving to db: {selected_gym_data}')
-            inserted_data = mongo_collection.insert_one(selected_gym_data)
-            logging.info(f'Data inserted for ID: {inserted_data.inserted_id}')
-        else:
-            logging.error(f'Error requesting gym data: {response.text}')
+                logging.info(f'Saving to db: {selected_gym_data}')
+                inserted_data = mongo_collection.insert_one(selected_gym_data)
+                logging.info(f'Data inserted for ID: {inserted_data.inserted_id}')
+            else:
+                logging.error(f'Error requesting gym data: {response.text}')
+
+        except Exception:
+            logging.error(f'Could not get capacity:')
+            logging.error(traceback.format_exc())
 
         time.sleep(10)
 except KeyError:

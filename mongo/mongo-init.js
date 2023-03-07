@@ -15,4 +15,4 @@ db.createCollection('checkin', {
     capped: false
 });
 
-db.checkin.insert([{'timestamp': '2023-02-28T11:37:43.0861', 'centerId': '320', 'webName': 'Hamburg-Wandsbek', 'status': 1, 'currentlyCheckedInCount': '60', 'maximumAllowedCheckedIn': '438'}]);
+db.checkin.insert([{'timestamp': '2023-02-28T11:37:43.0861', "centerId": 320, "currentlyCheckedInCount": 86, "maximumAllowedCheckedIn": 438, "numberOfAvailableSpots": 352, "numberOfReservedSpots": 0, "webName": "Hamburg-Wandsbek", "status": 1}]);
