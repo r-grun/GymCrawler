@@ -1,6 +1,18 @@
 # GymCrawler
 This project collects check-in data over gyms, stores it and provides overview over it.
-Uses the [rgrun/gymcrawler-python](https://hub.docker.com/repository/docker/rgrun/gymcrawler-python/general) docker image
+
+## Target architecture
+
+The project is made to be used as a server application.
+Thus, it uses depends on the [rgrun/gymcrawler-python](https://hub.docker.com/repository/docker/rgrun/gymcrawler-python/general) docker image which is prebuild for `linux/amd64` (e.g. Windows) and `linux/arm64/v8` (e.g. RaspberryPi).
+The `linux/arm64/v8` version is preselected but can be changed through changing the image tag in line `5` in the `docker-compose.yml` file.
+
+```
+    image: rgrun/gymcrawler-python:amd64    # for amd64 architecture (Windows)
+```
+```
+    image: rgrun/gymcrawler-python:arm64    # for amd64 architecture (RaspberryPi)
+```
 
 
 ## Prequisites
@@ -22,6 +34,12 @@ The root folder needs an .env file containing the following variables:
 | GYM_ID                    | The ID of the gym                                                                            | n.a.            |
 
 
-## Starting
+
+## Starting the application
 
 Simply run `docker compose up -d` in the root folder.
+
+
+## Open in browser
+
+_coming soon..._

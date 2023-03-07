@@ -2,7 +2,7 @@ version: '3.7'
 
 services:
   python:
-    image: rgrun/gymcrawler-python:latest
+    image: rgrun/gymcrawler-python:arm64
     build: ./collector/.
     container_name: datacrawler
     env_file: .env
