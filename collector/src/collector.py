@@ -62,7 +62,7 @@ try:
             logging.error(f'Could not get capacity:')
             logging.error(traceback.format_exc())
 
-        time.sleep(10)
+        time.sleep(600)
 except KeyError:
     logging.info('Program stopped manually.')
 except pymongo.errors.ServerSelectionTimeoutError as err:
