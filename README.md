@@ -1,5 +1,10 @@
 # GymCrawler
 This project collects check-in data over gyms, stores it and provides overview over it.
+Uses the [rgrun/gymcrawler-python](https://hub.docker.com/repository/docker/rgrun/gymcrawler-python/general) docker image
+
+
+## Prequisites
+*git* and *Docker* have to be installed
 
 
 ## .env File
@@ -15,3 +20,8 @@ The root folder needs an .env file containing the following variables:
 | WAIT_HOST_CONNECT_TIMEOUT | Timeout for the python container to connect to the mongo container (only for `wait` command) | `30`            |
 | GYM_CAPACITY_URL          | REST URL for requesting the gym capacity                                                     | n.a.            |
 | GYM_ID                    | The ID of the gym                                                                            | n.a.            |
+
+
+## Starting
+
+Simply run `docker compose up -d` in the root folder.
