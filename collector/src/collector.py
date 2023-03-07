@@ -21,8 +21,8 @@ logging.basicConfig(
 )
 
 # init script
-url = "https://jolly-meadow-0b07c4c03.2.azurestaticapps.net/api/centers/capacity"
-gym_id = '320'
+url = os.environ.get('GYM_CAPACITY_URL')
+gym_id = os.environ.get('GYM_ID')
 
 payload={}
 headers = {

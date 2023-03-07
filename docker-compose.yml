@@ -2,11 +2,15 @@ version: '3.7'
 
 services:
   python:
-    build: ./collector
+    image: rgrun/gymcrawler-python:latest
+    build: ./collector/.
     container_name: datacrawler
     env_file: .env
+    restart: unless-stopped
     ports:
         - 3000:3000
+    volumes:
+        - ./collector/src/logs:/app/src/logs
     depends_on:
       - mongo
     command: 
@@ -20,7 +24,7 @@ services:
   mongo:
     image: mongo:latest
     container_name: mongodb
-    restart: always
+    restart: unless-stopped
     env_file: .env
     ports:
         - 27017:27017
