@@ -9,9 +9,11 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
 import {MatButtonModule} from '@angular/material/button';
 import { CapacityCurrentComponent } from './features/capacity/capacity-current/capacity-current.component';
+import { BookingsComponent } from './features/bookings/bookings.component';
+import { HomeComponent } from './core/components/home/home.component';
 
 @NgModule({
-  declarations: [AppComponent, NavbarComponent, CapacityCurrentComponent],
+  declarations: [AppComponent, NavbarComponent, CapacityCurrentComponent, BookingsComponent, HomeComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,

@@ -1,6 +1,11 @@
 <p>
     <mat-toolbar color="primary">
-        <img src="../../../../assets/img/logo_white.png" alt="GymCrawler" id="logo">
+        <a routerLink="" id="logo-link">
+            <img src="../../../../assets/img/logo_white.png" alt="GymCrawler" id="logo">
+        </a>
         <span class="spacer"></span>
+        <a mat-button routerLink="/capacity" routerLinkActive="active" ariaCurrentWhenActive="page">Capacity</a>
+        <a mat-button routerLink="/bookings" routerLinkActive="active" ariaCurrentWhenActive="page">Bookings</a>
     </mat-toolbar>
+    
   </p>

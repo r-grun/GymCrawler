@@ -1,7 +1,13 @@
 .spacer {
-    flex: 1 1 auto;
+    width: 1em;
+}
+
+#logo-link {
+    height: 100%;
+    display: flex;
+    align-items: center;
 }
 
 #logo {
-    height: 50%;
+    height: 35%;
 }
