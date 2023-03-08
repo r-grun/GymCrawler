@@ -12,7 +12,12 @@ import { CapacityCurrentComponent } from './features/capacity/capacity-current/c
 import { BookingsComponent } from './features/bookings/bookings.component';
 import { HomeComponent } from './core/components/home/home.component';
 import { MatGridListModule } from '@angular/material/grid-list';
-import {MatCardModule} from '@angular/material/card';
+import { MatCardModule } from '@angular/material/card';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatDividerModule } from '@angular/material/divider';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatNativeDateModule, MAT_DATE_LOCALE } from '@angular/material/core';
+import {MatInputModule} from '@angular/material/input';
 
 @NgModule({
   declarations: [
@@ -30,9 +35,18 @@ import {MatCardModule} from '@angular/material/card';
     MatIconModule,
     MatButtonModule,
     MatGridListModule,
-    MatCardModule
+    MatCardModule,
+    MatDatepickerModule,
+    MatDividerModule,
+    MatFormFieldModule,
+    MatNativeDateModule,
+    MatInputModule
   ],
-  providers: [],
+  providers: [
+    MatDatepickerModule,
+    MatNativeDateModule,
+    {provide: MAT_DATE_LOCALE, useValue: 'de-DE'},
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
