@@ -1,0 +1,711 @@
+[{
+  "currentlyCheckedInCount": 3,
+  "maximumAllowedCheckedIn": 438,
+  "numberOfAvailableSpots": 435,
+  "timestamp": "2023-03-08T00:04:02.262007+01:00"
+},{
+  "currentlyCheckedInCount": 3,
+  "maximumAllowedCheckedIn": 438,
+  "numberOfAvailableSpots": 435,
+  "timestamp": "2023-03-08T00:14:03.102712+01:00"
+},{
+  "currentlyCheckedInCount": 3,
+  "maximumAllowedCheckedIn": 438,
+  "numberOfAvailableSpots": 435,
+  "timestamp": "2023-03-08T00:24:04.038273+01:00"
+},{
+  "currentlyCheckedInCount": 2,
+  "maximumAllowedCheckedIn": 438,
+  "numberOfAvailableSpots": 436,
+  "timestamp": "2023-03-08T00:34:04.572688+01:00"
+},{
+  "currentlyCheckedInCount": 2,
+  "maximumAllowedCheckedIn": 438,
+  "numberOfAvailableSpots": 436,
+  "timestamp": "2023-03-08T00:44:05.812549+01:00"
+},{
+  "currentlyCheckedInCount": 2,
+  "maximumAllowedCheckedIn": 438,
+  "numberOfAvailableSpots": 436,
+  "timestamp": "2023-03-08T00:54:06.852863+01:00"
+},{
+  "currentlyCheckedInCount": 1,
+  "maximumAllowedCheckedIn": 438,
+  "numberOfAvailableSpots": 437,
+  "timestamp": "2023-03-08T01:04:07.725254+01:00"
+},{
+  "currentlyCheckedInCount": 1,
+  "maximumAllowedCheckedIn": 438,
+  "numberOfAvailableSpots": 437,
+  "timestamp": "2023-03-08T01:14:08.602163+01:00"
+},{
+  "currentlyCheckedInCount": 1,
+  "maximumAllowedCheckedIn": 438,
+  "numberOfAvailableSpots": 437,
+  "timestamp": "2023-03-08T01:24:09.261215+01:00"
+},{
+  "currentlyCheckedInCount": 1,
+  "maximumAllowedCheckedIn": 438,
+  "numberOfAvailableSpots": 437,
+  "timestamp": "2023-03-08T01:34:10.005494+01:00"
+},{
+  "currentlyCheckedInCount": 1,
+  "maximumAllowedCheckedIn": 438,
+  "numberOfAvailableSpots": 437,
+  "timestamp": "2023-03-08T01:44:10.835451+01:00"
+},{
+  "currentlyCheckedInCount": 1,
+  "maximumAllowedCheckedIn": 438,
+  "numberOfAvailableSpots": 437,
+  "timestamp": "2023-03-08T01:54:11.455603+01:00"
+},{
+  "currentlyCheckedInCount": 1,
+  "maximumAllowedCheckedIn": 438,
+  "numberOfAvailableSpots": 437,
+  "timestamp": "2023-03-08T02:04:12.239404+01:00"
+},{
+  "currentlyCheckedInCount": 1,
+  "maximumAllowedCheckedIn": 438,
+  "numberOfAvailableSpots": 437,
+  "timestamp": "2023-03-08T02:14:12.964465+01:00"
+},{
+  "currentlyCheckedInCount": 1,
+  "maximumAllowedCheckedIn": 438,
+  "numberOfAvailableSpots": 437,
+  "timestamp": "2023-03-08T02:24:13.571438+01:00"
+},{
+  "currentlyCheckedInCount": 1,
+  "maximumAllowedCheckedIn": 438,
+  "numberOfAvailableSpots": 437,
+  "timestamp": "2023-03-08T02:34:14.326528+01:00"
+},{
+  "currentlyCheckedInCount": 1,
+  "maximumAllowedCheckedIn": 438,
+  "numberOfAvailableSpots": 437,
+  "timestamp": "2023-03-08T02:44:15.109990+01:00"
+},{
+  "currentlyCheckedInCount": 1,
+  "maximumAllowedCheckedIn": 438,
+  "numberOfAvailableSpots": 437,
+  "timestamp": "2023-03-08T02:54:15.984024+01:00"
+},{
+  "currentlyCheckedInCount": 1,
+  "maximumAllowedCheckedIn": 438,
+  "numberOfAvailableSpots": 437,
+  "timestamp": "2023-03-08T03:04:16.832422+01:00"
+},{
+  "currentlyCheckedInCount": 0,
+  "maximumAllowedCheckedIn": 438,
+  "numberOfAvailableSpots": 438,
+  "timestamp": "2023-03-08T03:14:17.571364+01:00"
+},{
+  "currentlyCheckedInCount": 0,
+  "maximumAllowedCheckedIn": 438,
+  "numberOfAvailableSpots": 438,
+  "timestamp": "2023-03-08T03:24:18.760588+01:00"
+},{
+  "currentlyCheckedInCount": 0,
+  "maximumAllowedCheckedIn": 438,
+  "numberOfAvailableSpots": 438,
+  "timestamp": "2023-03-08T03:34:19.301585+01:00"
+},{
+  "currentlyCheckedInCount": 0,
+  "maximumAllowedCheckedIn": 438,
+  "numberOfAvailableSpots": 438,
+  "timestamp": "2023-03-08T03:44:20.122067+01:00"
+},{
+  "currentlyCheckedInCount": 0,
+  "maximumAllowedCheckedIn": 438,
+  "numberOfAvailableSpots": 438,
+  "timestamp": "2023-03-08T03:54:21.010166+01:00"
+},{
+  "currentlyCheckedInCount": 0,
+  "maximumAllowedCheckedIn": 438,
+  "numberOfAvailableSpots": 438,
+  "timestamp": "2023-03-08T04:04:21.905339+01:00"
+},{
+  "currentlyCheckedInCount": 0,
+  "maximumAllowedCheckedIn": 438,
+  "numberOfAvailableSpots": 438,
+  "timestamp": "2023-03-08T04:14:22.781816+01:00"
+},{
+  "currentlyCheckedInCount": 0,
+  "maximumAllowedCheckedIn": 438,
+  "numberOfAvailableSpots": 438,
+  "timestamp": "2023-03-08T04:24:23.767297+01:00"
+},{
+  "currentlyCheckedInCount": 0,
+  "maximumAllowedCheckedIn": 438,
+  "numberOfAvailableSpots": 438,
+  "timestamp": "2023-03-08T04:34:24.564286+01:00"
+},{
+  "currentlyCheckedInCount": 0,
+  "maximumAllowedCheckedIn": 438,
+  "numberOfAvailableSpots": 438,
+  "timestamp": "2023-03-08T04:44:25.232610+01:00"
+},{
+  "currentlyCheckedInCount": 0,
+  "maximumAllowedCheckedIn": 438,
+  "numberOfAvailableSpots": 438,
+  "timestamp": "2023-03-08T04:54:25.816527+01:00"
+},{
+  "currentlyCheckedInCount": 0,
+  "maximumAllowedCheckedIn": 438,
+  "numberOfAvailableSpots": 438,
+  "timestamp": "2023-03-08T05:04:26.776457+01:00"
+},{
+  "currentlyCheckedInCount": 0,
+  "maximumAllowedCheckedIn": 438,
+  "numberOfAvailableSpots": 438,
+  "timestamp": "2023-03-08T05:14:27.534082+01:00"
+},{
+  "currentlyCheckedInCount": 0,
+  "maximumAllowedCheckedIn": 438,
+  "numberOfAvailableSpots": 438,
+  "timestamp": "2023-03-08T05:24:28.437737+01:00"
+},{
+  "currentlyCheckedInCount": 0,
+  "maximumAllowedCheckedIn": 438,
+  "numberOfAvailableSpots": 438,
+  "timestamp": "2023-03-08T05:34:29.240949+01:00"
+},{
+  "currentlyCheckedInCount": 0,
+  "maximumAllowedCheckedIn": 438,
+  "numberOfAvailableSpots": 438,
+  "timestamp": "2023-03-08T05:44:30.109622+01:00"
+},{
+  "currentlyCheckedInCount": 0,
+  "maximumAllowedCheckedIn": 438,
+  "numberOfAvailableSpots": 438,
+  "timestamp": "2023-03-08T05:54:30.835545+01:00"
+},{
+  "currentlyCheckedInCount": 11,
+  "maximumAllowedCheckedIn": 438,
+  "numberOfAvailableSpots": 427,
+  "timestamp": "2023-03-08T06:04:31.895390+01:00"
+},{
+  "currentlyCheckedInCount": 24,
+  "maximumAllowedCheckedIn": 438,
+  "numberOfAvailableSpots": 414,
+  "timestamp": "2023-03-08T06:14:32.706506+01:00"
+},{
+  "currentlyCheckedInCount": 26,
+  "maximumAllowedCheckedIn": 438,
+  "numberOfAvailableSpots": 412,
+  "timestamp": "2023-03-08T06:24:33.406008+01:00"
+},{
+  "currentlyCheckedInCount": 28,
+  "maximumAllowedCheckedIn": 438,
+  "numberOfAvailableSpots": 410,
+  "timestamp": "2023-03-08T06:34:34.270427+01:00"
+},{
+  "currentlyCheckedInCount": 34,
+  "maximumAllowedCheckedIn": 438,
+  "numberOfAvailableSpots": 404,
+  "timestamp": "2023-03-08T06:44:35.369679+01:00"
+},{
+  "currentlyCheckedInCount": 36,
+  "maximumAllowedCheckedIn": 438,
+  "numberOfAvailableSpots": 402,
+  "timestamp": "2023-03-08T06:54:36.077215+01:00"
+},{
+  "currentlyCheckedInCount": 41,
+  "maximumAllowedCheckedIn": 438,
+  "numberOfAvailableSpots": 397,
+  "timestamp": "2023-03-08T07:04:36.626431+01:00"
+},{
+  "currentlyCheckedInCount": 37,
+  "maximumAllowedCheckedIn": 438,
+  "numberOfAvailableSpots": 401,
+  "timestamp": "2023-03-08T07:14:37.262291+01:00"
+},{
+  "currentlyCheckedInCount": 32,
+  "maximumAllowedCheckedIn": 438,
+  "numberOfAvailableSpots": 406,
+  "timestamp": "2023-03-08T07:24:38.320237+01:00"
+},{
+  "currentlyCheckedInCount": 33,
+  "maximumAllowedCheckedIn": 438,
+  "numberOfAvailableSpots": 405,
+  "timestamp": "2023-03-08T07:34:38.933704+01:00"
+},{
+  "currentlyCheckedInCount": 33,
+  "maximumAllowedCheckedIn": 438,
+  "numberOfAvailableSpots": 405,
+  "timestamp": "2023-03-08T07:44:40.418294+01:00"
+},{
+  "currentlyCheckedInCount": 33,
+  "maximumAllowedCheckedIn": 438,
+  "numberOfAvailableSpots": 405,
+  "timestamp": "2023-03-08T07:54:41.153334+01:00"
+},{
+  "currentlyCheckedInCount": 27,
+  "maximumAllowedCheckedIn": 438,
+  "numberOfAvailableSpots": 411,
+  "timestamp": "2023-03-08T08:04:42.124617+01:00"
+},{
+  "currentlyCheckedInCount": 31,
+  "maximumAllowedCheckedIn": 438,
+  "numberOfAvailableSpots": 407,
+  "timestamp": "2023-03-08T08:14:42.875590+01:00"
+},{
+  "currentlyCheckedInCount": 32,
+  "maximumAllowedCheckedIn": 438,
+  "numberOfAvailableSpots": 406,
+  "timestamp": "2023-03-08T08:24:43.463364+01:00"
+},{
+  "currentlyCheckedInCount": 30,
+  "maximumAllowedCheckedIn": 438,
+  "numberOfAvailableSpots": 408,
+  "timestamp": "2023-03-08T08:34:44.628226+01:00"
+},{
+  "currentlyCheckedInCount": 30,
+  "maximumAllowedCheckedIn": 438,
+  "numberOfAvailableSpots": 408,
+  "timestamp": "2023-03-08T08:44:45.343296+01:00"
+},{
+  "currentlyCheckedInCount": 32,
+  "maximumAllowedCheckedIn": 438,
+  "numberOfAvailableSpots": 406,
+  "timestamp": "2023-03-08T08:54:45.937440+01:00"
+},{
+  "currentlyCheckedInCount": 39,
+  "maximumAllowedCheckedIn": 438,
+  "numberOfAvailableSpots": 399,
+  "timestamp": "2023-03-08T09:04:46.861843+01:00"
+},{
+  "currentlyCheckedInCount": 40,
+  "maximumAllowedCheckedIn": 438,
+  "numberOfAvailableSpots": 398,
+  "timestamp": "2023-03-08T09:14:47.465475+01:00"
+},{
+  "currentlyCheckedInCount": 43,
+  "maximumAllowedCheckedIn": 438,
+  "numberOfAvailableSpots": 395,
+  "timestamp": "2023-03-08T09:24:48.028183+01:00"
+},{
+  "currentlyCheckedInCount": 49,
+  "maximumAllowedCheckedIn": 438,
+  "numberOfAvailableSpots": 389,
+  "timestamp": "2023-03-08T09:34:48.675473+01:00"
+},{
+  "currentlyCheckedInCount": 54,
+  "maximumAllowedCheckedIn": 438,
+  "numberOfAvailableSpots": 384,
+  "timestamp": "2023-03-08T09:44:49.601371+01:00"
+},{
+  "currentlyCheckedInCount": 59,
+  "maximumAllowedCheckedIn": 438,
+  "numberOfAvailableSpots": 379,
+  "timestamp": "2023-03-08T09:54:50.362875+01:00"
+},{
+  "currentlyCheckedInCount": 66,
+  "maximumAllowedCheckedIn": 438,
+  "numberOfAvailableSpots": 372,
+  "timestamp": "2023-03-08T10:04:50.944302+01:00"
+},{
+  "currentlyCheckedInCount": 75,
+  "maximumAllowedCheckedIn": 438,
+  "numberOfAvailableSpots": 363,
+  "timestamp": "2023-03-08T10:14:51.558199+01:00"
+},{
+  "currentlyCheckedInCount": 76,
+  "maximumAllowedCheckedIn": 438,
+  "numberOfAvailableSpots": 362,
+  "timestamp": "2023-03-08T10:24:52.294003+01:00"
+},{
+  "currentlyCheckedInCount": 75,
+  "maximumAllowedCheckedIn": 438,
+  "numberOfAvailableSpots": 363,
+  "timestamp": "2023-03-08T10:34:52.925557+01:00"
+},{
+  "currentlyCheckedInCount": 75,
+  "maximumAllowedCheckedIn": 438,
+  "numberOfAvailableSpots": 363,
+  "timestamp": "2023-03-08T10:44:53.484429+01:00"
+},{
+  "currentlyCheckedInCount": 79,
+  "maximumAllowedCheckedIn": 438,
+  "numberOfAvailableSpots": 359,
+  "timestamp": "2023-03-08T10:54:54.284987+01:00"
+},{
+  "currentlyCheckedInCount": 80,
+  "maximumAllowedCheckedIn": 438,
+  "numberOfAvailableSpots": 358,
+  "timestamp": "2023-03-08T11:04:55.187159+01:00"
+},{
+  "currentlyCheckedInCount": 83,
+  "maximumAllowedCheckedIn": 438,
+  "numberOfAvailableSpots": 355,
+  "timestamp": "2023-03-08T11:14:55.994861+01:00"
+},{
+  "currentlyCheckedInCount": 75,
+  "maximumAllowedCheckedIn": 438,
+  "numberOfAvailableSpots": 363,
+  "timestamp": "2023-03-08T11:24:56.596508+01:00"
+},{
+  "currentlyCheckedInCount": 72,
+  "maximumAllowedCheckedIn": 438,
+  "numberOfAvailableSpots": 366,
+  "timestamp": "2023-03-08T11:34:57.241253+01:00"
+},{
+  "currentlyCheckedInCount": 75,
+  "maximumAllowedCheckedIn": 438,
+  "numberOfAvailableSpots": 363,
+  "timestamp": "2023-03-08T11:44:57.859460+01:00"
+},{
+  "currentlyCheckedInCount": 75,
+  "maximumAllowedCheckedIn": 438,
+  "numberOfAvailableSpots": 363,
+  "timestamp": "2023-03-08T11:54:58.545631+01:00"
+},{
+  "currentlyCheckedInCount": 74,
+  "maximumAllowedCheckedIn": 438,
+  "numberOfAvailableSpots": 364,
+  "timestamp": "2023-03-08T12:04:59.166874+01:00"
+},{
+  "currentlyCheckedInCount": 73,
+  "maximumAllowedCheckedIn": 438,
+  "numberOfAvailableSpots": 365,
+  "timestamp": "2023-03-08T12:14:59.879110+01:00"
+},{
+  "currentlyCheckedInCount": 77,
+  "maximumAllowedCheckedIn": 438,
+  "numberOfAvailableSpots": 361,
+  "timestamp": "2023-03-08T12:25:00.502504+01:00"
+},{
+  "currentlyCheckedInCount": 82,
+  "maximumAllowedCheckedIn": 438,
+  "numberOfAvailableSpots": 356,
+  "timestamp": "2023-03-08T12:35:01.386990+01:00"
+},{
+  "currentlyCheckedInCount": 79,
+  "maximumAllowedCheckedIn": 438,
+  "numberOfAvailableSpots": 359,
+  "timestamp": "2023-03-08T12:45:01.973612+01:00"
+},{
+  "currentlyCheckedInCount": 76,
+  "maximumAllowedCheckedIn": 438,
+  "numberOfAvailableSpots": 362,
+  "timestamp": "2023-03-08T12:55:02.545937+01:00"
+},{
+  "currentlyCheckedInCount": 70,
+  "maximumAllowedCheckedIn": 438,
+  "numberOfAvailableSpots": 368,
+  "timestamp": "2023-03-08T13:05:03.167536+01:00"
+},{
+  "currentlyCheckedInCount": 74,
+  "maximumAllowedCheckedIn": 438,
+  "numberOfAvailableSpots": 364,
+  "timestamp": "2023-03-08T13:15:03.805128+01:00"
+},{
+  "currentlyCheckedInCount": 78,
+  "maximumAllowedCheckedIn": 438,
+  "numberOfAvailableSpots": 360,
+  "timestamp": "2023-03-08T13:25:04.392900+01:00"
+},{
+  "currentlyCheckedInCount": 72,
+  "maximumAllowedCheckedIn": 438,
+  "numberOfAvailableSpots": 366,
+  "timestamp": "2023-03-08T13:35:05.024914+01:00"
+},{
+  "currentlyCheckedInCount": 71,
+  "maximumAllowedCheckedIn": 438,
+  "numberOfAvailableSpots": 367,
+  "timestamp": "2023-03-08T13:45:05.514884+01:00"
+},{
+  "currentlyCheckedInCount": 70,
+  "maximumAllowedCheckedIn": 438,
+  "numberOfAvailableSpots": 368,
+  "timestamp": "2023-03-08T13:55:06.387397+01:00"
+},{
+  "currentlyCheckedInCount": 79,
+  "maximumAllowedCheckedIn": 438,
+  "numberOfAvailableSpots": 359,
+  "timestamp": "2023-03-08T14:05:07.244439+01:00"
+},{
+  "currentlyCheckedInCount": 79,
+  "maximumAllowedCheckedIn": 438,
+  "numberOfAvailableSpots": 359,
+  "timestamp": "2023-03-08T14:15:08.011643+01:00"
+},{
+  "currentlyCheckedInCount": 78,
+  "maximumAllowedCheckedIn": 438,
+  "numberOfAvailableSpots": 360,
+  "timestamp": "2023-03-08T14:25:08.634455+01:00"
+},{
+  "currentlyCheckedInCount": 73,
+  "maximumAllowedCheckedIn": 438,
+  "numberOfAvailableSpots": 365,
+  "timestamp": "2023-03-08T14:35:09.291299+01:00"
+},{
+  "currentlyCheckedInCount": 72,
+  "maximumAllowedCheckedIn": 438,
+  "numberOfAvailableSpots": 366,
+  "timestamp": "2023-03-08T14:45:09.913313+01:00"
+},{
+  "currentlyCheckedInCount": 78,
+  "maximumAllowedCheckedIn": 438,
+  "numberOfAvailableSpots": 360,
+  "timestamp": "2023-03-08T14:55:10.625743+01:00"
+},{
+  "currentlyCheckedInCount": 83,
+  "maximumAllowedCheckedIn": 438,
+  "numberOfAvailableSpots": 355,
+  "timestamp": "2023-03-08T15:05:11.599609+01:00"
+},{
+  "currentlyCheckedInCount": 84,
+  "maximumAllowedCheckedIn": 438,
+  "numberOfAvailableSpots": 354,
+  "timestamp": "2023-03-08T15:15:12.353178+01:00"
+},{
+  "currentlyCheckedInCount": 86,
+  "maximumAllowedCheckedIn": 438,
+  "numberOfAvailableSpots": 352,
+  "timestamp": "2023-03-08T15:25:13.098278+01:00"
+},{
+  "currentlyCheckedInCount": 90,
+  "maximumAllowedCheckedIn": 438,
+  "numberOfAvailableSpots": 348,
+  "timestamp": "2023-03-08T15:35:13.736572+01:00"
+},{
+  "currentlyCheckedInCount": 84,
+  "maximumAllowedCheckedIn": 438,
+  "numberOfAvailableSpots": 354,
+  "timestamp": "2023-03-08T15:45:14.498904+01:00"
+},{
+  "currentlyCheckedInCount": 84,
+  "maximumAllowedCheckedIn": 438,
+  "numberOfAvailableSpots": 354,
+  "timestamp": "2023-03-08T15:55:15.125662+01:00"
+},{
+  "currentlyCheckedInCount": 80,
+  "maximumAllowedCheckedIn": 438,
+  "numberOfAvailableSpots": 358,
+  "timestamp": "2023-03-08T16:05:15.823824+01:00"
+},{
+  "currentlyCheckedInCount": 80,
+  "maximumAllowedCheckedIn": 438,
+  "numberOfAvailableSpots": 358,
+  "timestamp": "2023-03-08T16:15:16.577256+01:00"
+},{
+  "currentlyCheckedInCount": 85,
+  "maximumAllowedCheckedIn": 438,
+  "numberOfAvailableSpots": 353,
+  "timestamp": "2023-03-08T16:25:17.265431+01:00"
+},{
+  "currentlyCheckedInCount": 87,
+  "maximumAllowedCheckedIn": 438,
+  "numberOfAvailableSpots": 351,
+  "timestamp": "2023-03-08T16:35:17.826890+01:00"
+},{
+  "currentlyCheckedInCount": 86,
+  "maximumAllowedCheckedIn": 438,
+  "numberOfAvailableSpots": 352,
+  "timestamp": "2023-03-08T16:45:18.418134+01:00"
+},{
+  "currentlyCheckedInCount": 84,
+  "maximumAllowedCheckedIn": 438,
+  "numberOfAvailableSpots": 354,
+  "timestamp": "2023-03-08T16:55:18.929642+01:00"
+},{
+  "currentlyCheckedInCount": 89,
+  "maximumAllowedCheckedIn": 438,
+  "numberOfAvailableSpots": 349,
+  "timestamp": "2023-03-08T17:05:19.623929+01:00"
+},{
+  "currentlyCheckedInCount": 86,
+  "maximumAllowedCheckedIn": 438,
+  "numberOfAvailableSpots": 352,
+  "timestamp": "2023-03-08T17:15:20.155606+01:00"
+},{
+  "currentlyCheckedInCount": 96,
+  "maximumAllowedCheckedIn": 438,
+  "numberOfAvailableSpots": 342,
+  "timestamp": "2023-03-08T17:35:30.977006+01:00"
+},{
+  "currentlyCheckedInCount": 119,
+  "maximumAllowedCheckedIn": 438,
+  "numberOfAvailableSpots": 319,
+  "timestamp": "2023-03-08T17:45:31.709834+01:00"
+},{
+  "currentlyCheckedInCount": 131,
+  "maximumAllowedCheckedIn": 438,
+  "numberOfAvailableSpots": 307,
+  "timestamp": "2023-03-08T17:55:32.294175+01:00"
+},{
+  "currentlyCheckedInCount": 138,
+  "maximumAllowedCheckedIn": 438,
+  "numberOfAvailableSpots": 300,
+  "timestamp": "2023-03-08T18:05:32.926003+01:00"
+},{
+  "currentlyCheckedInCount": 133,
+  "maximumAllowedCheckedIn": 438,
+  "numberOfAvailableSpots": 305,
+  "timestamp": "2023-03-08T18:15:33.511730+01:00"
+},{
+  "currentlyCheckedInCount": 146,
+  "maximumAllowedCheckedIn": 438,
+  "numberOfAvailableSpots": 292,
+  "timestamp": "2023-03-08T18:25:34.580813+01:00"
+},{
+  "currentlyCheckedInCount": 148,
+  "maximumAllowedCheckedIn": 438,
+  "numberOfAvailableSpots": 290,
+  "timestamp": "2023-03-08T18:35:35.377148+01:00"
+},{
+  "currentlyCheckedInCount": 158,
+  "maximumAllowedCheckedIn": 438,
+  "numberOfAvailableSpots": 280,
+  "timestamp": "2023-03-08T18:45:36.113133+01:00"
+},{
+  "currentlyCheckedInCount": 162,
+  "maximumAllowedCheckedIn": 438,
+  "numberOfAvailableSpots": 276,
+  "timestamp": "2023-03-08T18:55:36.730793+01:00"
+},{
+  "currentlyCheckedInCount": 156,
+  "maximumAllowedCheckedIn": 438,
+  "numberOfAvailableSpots": 282,
+  "timestamp": "2023-03-08T19:05:37.395650+01:00"
+},{
+  "currentlyCheckedInCount": 162,
+  "maximumAllowedCheckedIn": 438,
+  "numberOfAvailableSpots": 276,
+  "timestamp": "2023-03-08T19:15:38.115176+01:00"
+},{
+  "currentlyCheckedInCount": 159,
+  "maximumAllowedCheckedIn": 438,
+  "numberOfAvailableSpots": 279,
+  "timestamp": "2023-03-08T19:25:38.865885+01:00"
+},{
+  "currentlyCheckedInCount": 167,
+  "maximumAllowedCheckedIn": 438,
+  "numberOfAvailableSpots": 271,
+  "timestamp": "2023-03-08T19:45:49.553344+01:00"
+},{
+  "currentlyCheckedInCount": 175,
+  "maximumAllowedCheckedIn": 438,
+  "numberOfAvailableSpots": 263,
+  "timestamp": "2023-03-08T19:55:50.258196+01:00"
+},{
+  "currentlyCheckedInCount": 166,
+  "maximumAllowedCheckedIn": 438,
+  "numberOfAvailableSpots": 272,
+  "timestamp": "2023-03-08T20:05:50.897971+01:00"
+},{
+  "currentlyCheckedInCount": 163,
+  "maximumAllowedCheckedIn": 438,
+  "numberOfAvailableSpots": 275,
+  "timestamp": "2023-03-08T20:15:51.477436+01:00"
+},{
+  "currentlyCheckedInCount": 159,
+  "maximumAllowedCheckedIn": 438,
+  "numberOfAvailableSpots": 279,
+  "timestamp": "2023-03-08T20:25:52.902057+01:00"
+},{
+  "currentlyCheckedInCount": 152,
+  "maximumAllowedCheckedIn": 438,
+  "numberOfAvailableSpots": 286,
+  "timestamp": "2023-03-08T20:35:53.540103+01:00"
+},{
+  "currentlyCheckedInCount": 140,
+  "maximumAllowedCheckedIn": 438,
+  "numberOfAvailableSpots": 298,
+  "timestamp": "2023-03-08T20:45:54.154184+01:00"
+},{
+  "currentlyCheckedInCount": 138,
+  "maximumAllowedCheckedIn": 438,
+  "numberOfAvailableSpots": 300,
+  "timestamp": "2023-03-08T20:55:54.856583+01:00"
+},{
+  "currentlyCheckedInCount": 121,
+  "maximumAllowedCheckedIn": 438,
+  "numberOfAvailableSpots": 317,
+  "timestamp": "2023-03-08T21:05:55.542835+01:00"
+},{
+  "currentlyCheckedInCount": 106,
+  "maximumAllowedCheckedIn": 438,
+  "numberOfAvailableSpots": 332,
+  "timestamp": "2023-03-08T21:15:56.151016+01:00"
+},{
+  "currentlyCheckedInCount": 83,
+  "maximumAllowedCheckedIn": 438,
+  "numberOfAvailableSpots": 355,
+  "timestamp": "2023-03-08T21:25:56.790359+01:00"
+},{
+  "currentlyCheckedInCount": 72,
+  "maximumAllowedCheckedIn": 438,
+  "numberOfAvailableSpots": 366,
+  "timestamp": "2023-03-08T21:35:57.580984+01:00"
+},{
+  "currentlyCheckedInCount": 58,
+  "maximumAllowedCheckedIn": 438,
+  "numberOfAvailableSpots": 380,
+  "timestamp": "2023-03-08T21:45:58.366956+01:00"
+},{
+  "currentlyCheckedInCount": 48,
+  "maximumAllowedCheckedIn": 438,
+  "numberOfAvailableSpots": 390,
+  "timestamp": "2023-03-08T21:55:59.008511+01:00"
+},{
+  "currentlyCheckedInCount": 43,
+  "maximumAllowedCheckedIn": 438,
+  "numberOfAvailableSpots": 395,
+  "timestamp": "2023-03-08T22:05:59.643092+01:00"
+},{
+  "currentlyCheckedInCount": 32,
+  "maximumAllowedCheckedIn": 438,
+  "numberOfAvailableSpots": 406,
+  "timestamp": "2023-03-08T22:16:00.323838+01:00"
+},{
+  "currentlyCheckedInCount": 29,
+  "maximumAllowedCheckedIn": 438,
+  "numberOfAvailableSpots": 409,
+  "timestamp": "2023-03-08T22:26:01.083524+01:00"
+},{
+  "currentlyCheckedInCount": 28,
+  "maximumAllowedCheckedIn": 438,
+  "numberOfAvailableSpots": 410,
+  "timestamp": "2023-03-08T22:36:01.791418+01:00"
+},{
+  "currentlyCheckedInCount": 24,
+  "maximumAllowedCheckedIn": 438,
+  "numberOfAvailableSpots": 414,
+  "timestamp": "2023-03-08T22:46:02.504824+01:00"
+},{
+  "currentlyCheckedInCount": 24,
+  "maximumAllowedCheckedIn": 438,
+  "numberOfAvailableSpots": 414,
+  "timestamp": "2023-03-08T22:56:03.110965+01:00"
+},{
+  "currentlyCheckedInCount": 22,
+  "maximumAllowedCheckedIn": 438,
+  "numberOfAvailableSpots": 416,
+  "timestamp": "2023-03-08T23:06:03.921343+01:00"
+},{
+  "currentlyCheckedInCount": 20,
+  "maximumAllowedCheckedIn": 438,
+  "numberOfAvailableSpots": 418,
+  "timestamp": "2023-03-08T23:16:04.617108+01:00"
+},{
+  "currentlyCheckedInCount": 16,
+  "maximumAllowedCheckedIn": 438,
+  "numberOfAvailableSpots": 422,
+  "timestamp": "2023-03-08T23:26:05.308301+01:00"
+},{
+  "currentlyCheckedInCount": 12,
+  "maximumAllowedCheckedIn": 438,
+  "numberOfAvailableSpots": 426,
+  "timestamp": "2023-03-08T23:36:05.927557+01:00"
+},{
+  "currentlyCheckedInCount": 8,
+  "maximumAllowedCheckedIn": 438,
+  "numberOfAvailableSpots": 430,
+  "timestamp": "2023-03-08T23:46:06.662469+01:00"
+},{
+  "currentlyCheckedInCount": 5,
+  "maximumAllowedCheckedIn": 438,
+  "numberOfAvailableSpots": 433,
+  "timestamp": "2023-03-08T23:56:07.513109+01:00"
+}]

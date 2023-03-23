@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './core/components/home/home.component';
 import { BookingsComponent } from './features/bookings/bookings.component';
-import { CapacityCurrentComponent } from './features/capacity/capacity-current/capacity-current.component';
+import { CapacityCurrentComponent } from './features/capacity/components/capacity-current/capacity-current.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },

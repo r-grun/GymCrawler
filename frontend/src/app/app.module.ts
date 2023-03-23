@@ -8,7 +8,7 @@ import { NavbarComponent } from './core/components/navbar/navbar.component';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
-import { CapacityCurrentComponent } from './features/capacity/capacity-current/capacity-current.component';
+import { CapacityCurrentComponent } from './features/capacity/components/capacity-current/capacity-current.component';
 import { BookingsComponent } from './features/bookings/bookings.component';
 import { HomeComponent } from './core/components/home/home.component';
 import { MatGridListModule } from '@angular/material/grid-list';
@@ -19,6 +19,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatNativeDateModule, MAT_DATE_LOCALE } from '@angular/material/core';
 import {MatInputModule} from '@angular/material/input';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { NgxEchartsModule } from 'ngx-echarts';
 
 @NgModule({
   declarations: [
@@ -29,6 +30,14 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     HomeComponent,
   ],
   imports: [
+    NgxEchartsModule.forRoot({
+      /**
+       * This will import all modules from echarts.
+       * If you only need custom modules,
+       * please refer to [Custom Build] section.
+       */
+      echarts: () => import('echarts'), // or import('./path-to-my-custom-echarts')
+    }),
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
