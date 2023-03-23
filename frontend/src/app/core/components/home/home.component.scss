@@ -5,6 +5,16 @@
     justify-content: space-evenly;
 }
 
+mat-card-title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+mat-card-title > mat-icon {
+    margin-right: 15px;
+}
+
 mat-card-header{
     margin-bottom: 15px;
 }
