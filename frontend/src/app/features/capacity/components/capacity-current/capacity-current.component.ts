@@ -1,7 +1,8 @@
+import { animation } from '@angular/animations';
 import { Component } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
+import { MatDatepickerInputEvent } from '@angular/material/datepicker';
 import { EChartsOption } from 'echarts';
-import { color } from 'echarts/types/dist/echarts';
 import { CapacityService } from '../../services/capacity.service';
 
 @Component({
@@ -10,12 +11,13 @@ import { CapacityService } from '../../services/capacity.service';
   styleUrls: ['./capacity-current.component.scss'],
 })
 export class CapacityCurrentComponent {
-
-  constructor(private capacityService: CapacityService){}
+  constructor(private capacityService: CapacityService) {
+    this.selectedDateFormControl.setValue(this.todayDate);
+  }
 
   todayDate = new Date(Date.now());
-  selectedDate = new FormControl(this.todayDate);
-  private displayData = this.capacityService.getCapacityData(new Date());
+  selectedDateFormControl = new FormControl(this.todayDate);
+  private displayData = this.capacityService.getCapacityData(this.todayDate);
 
   chartOption: EChartsOption = {
     dataset: {
@@ -30,25 +32,23 @@ export class CapacityCurrentComponent {
     yAxis: {
       type: 'value',
       min: 0,
-      max: 1
+      max: 100,
     },
     visualMap: {
       top: 50,
       right: 10,
       pieces: [
         {
-          gt: 0,
-          lte: 0.4,
+          lte: 40,
           color: '#4CAF50',
         },
         {
-          gt: 0.4,
-          lte: 0.7,
+          gt: 40,
+          lte: 70,
           color: '#FFA000',
         },
         {
-          gt: 0.7,
-          lte: 1,
+          gt: 70,
           color: '#D32F2F',
         },
       ],
@@ -60,7 +60,7 @@ export class CapacityCurrentComponent {
       type: 'line',
       encode: {
         x: 'timestamp',
-        y: 'rate'
+        y: 'rate',
       },
       markLine: {
         silent: true,
@@ -70,13 +70,33 @@ export class CapacityCurrentComponent {
         },
         data: [
           {
-            yAxis: 0.4,
+            yAxis: 40,
           },
           {
-            yAxis: 0.7,
+            yAxis: 70,
           },
         ],
       },
+      showSymbol: false,
+    },
+    dataZoom: {
+      type: 'slider',
     },
   };
+
+  setPickedDate(event: MatDatepickerInputEvent<Date>) {
+    let selectedDate: Date = event.value ? event.value : this.todayDate;
+    this.selectedDateFormControl.setValue(selectedDate);
+    this.displayData = this.capacityService.getCapacityData(selectedDate);
+  }
+
+  changeDate(amount: string) {
+    let selectedDate: Date = this.selectedDateFormControl.value ? this.selectedDateFormControl.value : this.todayDate;
+    if (amount === 'later') {
+      selectedDate.setDate(selectedDate.getDate() + 1);
+    } else {
+      selectedDate.setDate(selectedDate.getDate() - 1);
+    }
+    this.selectedDateFormControl.setValue(selectedDate);
+  }
 }

@@ -13,7 +13,7 @@ export class CapacityService {
     
     return testData.map(item => {
       let timestamp = new Date(item.timestamp);
-      let rate = (item.currentlyCheckedInCount / item.maximumAllowedCheckedIn);
+      let rate = (item.currentlyCheckedInCount / item.maximumAllowedCheckedIn)*100;
       return {"timestamp": timestamp, "rate": rate}
     });
   }
