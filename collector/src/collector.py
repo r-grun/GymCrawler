@@ -4,7 +4,6 @@ import time
 import logging
 import pymongo
 from datetime import datetime
-from pytz import timezone
 import traceback
 import os
 
@@ -50,7 +49,7 @@ try:
                 gym_data = json.loads(response.text)
                 selected_gym_data = gym_data['capacityInfos']['centerId' == gym_id] 
 
-                timestamp = datetime.now(timezone('Europe/Berlin')).isoformat()
+                timestamp = datetime.today().replace(microsecond=0)
                 selected_gym_data['timestamp'] = timestamp
 
                 logging.info(f'Saving to db: {selected_gym_data}')
