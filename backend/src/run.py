@@ -1,16 +1,13 @@
 """Web Server Gateway Interface"""
 
-##################
-# FOR PRODUCTION
-####################
-from app.app import app
+from app.app import create_app
 import logging
+import configparser
+
+config = configparser.ConfigParser()
+
 
 if __name__ == "__main__":
-    ####################
-    # FOR DEVELOPMENT
-    ####################
-
     logPath = './logs/'
     fileName = 'flask.log'
 
@@ -24,4 +21,7 @@ if __name__ == "__main__":
         ]
     )
 
-    app.run(host='0.0.0.0', debug=True)
+    app = create_app()
+    app.config['DEBUG'] = True
+
+    app.run()
