@@ -4,14 +4,25 @@ This project collects check-in data over gyms, stores it and provides overview o
 ## Target architecture
 
 The project is made to be used as a server application.
-Thus, it depends on the [rgrun/gymcrawler-python](https://hub.docker.com/repository/docker/rgrun/gymcrawler-python/general) docker image which is prebuild for `linux/amd64` (e.g. Windows) and `linux/arm64/v8` (e.g. RaspberryPi).
-The `linux/arm64/v8` version is preselected but can be changed through changing the image tag in line `5` in the `docker-compose.yml` file.
+Thus, it depends on the [rgrun/gymcrawler-python](https://hub.docker.com/repository/docker/rgrun/gymcrawler-python/general) and [rgrun/gymcrawler-backend](https://hub.docker.com/repository/docker/rgrun/gymcrawler-backend/general) docker images which are prebuild for `linux/amd64` (e.g. Windows) and `linux/arm64/v8` (e.g. RaspberryPi).
+The `linux/arm64/v8` version is preselected but can be changed through changing the image tag in the `docker-compose.yml` file.
+
+For `rgrun/gymcrawler-python` images:
 
 ```
     image: rgrun/gymcrawler-python:amd64    # for amd64 architecture (Windows)
 ```
 ```
-    image: rgrun/gymcrawler-python:arm64    # for amd64 architecture (RaspberryPi)
+    image: rgrun/gymcrawler-python:arm64    # for arm64 architecture (RaspberryPi)
+```
+
+For `rgrun/gymcrawler-backend` images:
+
+```
+    image: rgrun/gymcrawler-backend:amd64    # for amd64 architecture (Windows)
+```
+```
+    image: rgrun/gymcrawler-backend:arm64    # for arm64 architecture (RaspberryPi)
 ```
 
 
@@ -24,6 +35,7 @@ The root folder needs an .env file containing the following variables:
 
 | Variable                  | Description                                                                                  | Example value   |
 |---------------------------|----------------------------------------------------------------------------------------------|-----------------|
+| MONGO_ADDRESS             | Address for the mongo-container | `mongo`
 | MONGO_GYM_USERNAME        | Username of the local database (gymDB)                                                       | `gymuser`       |
 | MONGO_GYM_PASSWORD        | Password for the gymDB user                                                                  | `gympass`       |
 | WAIT_HOSTS                | Container name and port of the mongo container                                               | `mongodb:27017` |
