@@ -33,7 +33,20 @@ services:
         - ./mongo/data:/data/db
     networks:
       - python-mongo-net
-
+  backend:
+    image: rgrun/gymcrawler-backend:arm64
+    build: ./backend/.
+    container_name: backend
+    env_file: .env
+    restart: unless-stopped
+    ports:
+        - 5000:5000
+    volumes:
+        - ./backend/src/logs:/backend/src/logs
+    depends_on:
+      - mongo
+    networks:
+      - python-mongo-net
 networks:
   python-mongo-net:
     driver: bridge
