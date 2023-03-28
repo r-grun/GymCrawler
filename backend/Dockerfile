@@ -1,5 +1,4 @@
 FROM python:3.10
-# FROM tecktron/python-waitress:latest
 WORKDIR /app
 COPY ./src .
 RUN pip3 install -r requirements.txt
