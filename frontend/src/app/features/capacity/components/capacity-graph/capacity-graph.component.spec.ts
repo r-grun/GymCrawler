@@ -1,18 +1,17 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
-import { CapacityCurrentComponent } from './capacity-current.component';
+import { CapacityGraphComponent } from './capacity-graph.component';
 
 describe('CapacityCurrentComponent', () => {
-  let component: CapacityCurrentComponent;
-  let fixture: ComponentFixture<CapacityCurrentComponent>;
+  let component: CapacityGraphComponent;
+  let fixture: ComponentFixture<CapacityGraphComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ CapacityCurrentComponent ]
+      declarations: [ CapacityGraphComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(CapacityCurrentComponent);
+    fixture = TestBed.createComponent(CapacityGraphComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

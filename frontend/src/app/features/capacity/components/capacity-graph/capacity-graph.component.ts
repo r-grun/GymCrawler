@@ -1,16 +1,15 @@
-import { animation } from '@angular/animations';
 import { Component } from '@angular/core';
-import { FormControl, FormGroup } from '@angular/forms';
+import { FormControl,  } from '@angular/forms';
 import { MatDatepickerInputEvent } from '@angular/material/datepicker';
 import { EChartsOption } from 'echarts';
 import { CapacityService } from '../../services/capacity.service';
 
 @Component({
-  selector: 'app-capacity-current',
-  templateUrl: './capacity-current.component.html',
-  styleUrls: ['./capacity-current.component.scss'],
+  selector: 'app-capacity-graph',
+  templateUrl: './capacity-graph.component.html',
+  styleUrls: ['./capacity-graph.component.scss'],
 })
-export class CapacityCurrentComponent {
+export class CapacityGraphComponent {
   constructor(private capacityService: CapacityService) {
     this.selectedDateFormControl.setValue(this.todayDate);
   }

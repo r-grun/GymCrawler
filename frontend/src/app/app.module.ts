@@ -8,7 +8,6 @@ import { NavbarComponent } from './core/components/navbar/navbar.component';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
-import { CapacityCurrentComponent } from './features/capacity/components/capacity-current/capacity-current.component';
 import { BookingsComponent } from './features/bookings/bookings.component';
 import { HomeComponent } from './core/components/home/home.component';
 import { MatGridListModule } from '@angular/material/grid-list';
@@ -20,12 +19,13 @@ import { MatNativeDateModule, MAT_DATE_LOCALE } from '@angular/material/core';
 import {MatInputModule} from '@angular/material/input';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NgxEchartsModule } from 'ngx-echarts';
+import { CapacityGraphComponent } from './features/capacity/components/capacity-graph/capacity-graph.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
-    CapacityCurrentComponent,
+    CapacityGraphComponent,
     BookingsComponent,
     HomeComponent,
   ],
