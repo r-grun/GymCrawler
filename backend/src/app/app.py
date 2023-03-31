@@ -29,7 +29,7 @@ def create_app():
     app.register_blueprint(blueprint_capacity, url_prefix="/api/v1")
 
     # init DB
-    app.config["MONGO_URI"] = f"mongodb://{os.environ.get('MONGO_GYM_USERNAME')}:{os.environ.get('MONGO_GYM_PASSWORD')}@{os.environ.get('MONGO_ADDRESS')}:27017/gymDB"
+    app.config["MONGO_URI"] =f"mongodb://{os.environ.get('MONGO_GYM_USERNAME')}:{os.environ.get('MONGO_GYM_PASSWORD')}@{os.environ.get('MONGO_ADDRESS')}:{os.environ.get('MONGO_PORT')}/{os.environ.get('MONGO_DB')}"
     # app.config["MONGO_URI"] = f"mongodb://gymuser:gymPass@127.0.0.1:27017/gymDB"
 
     return app
