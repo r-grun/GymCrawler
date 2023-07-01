@@ -28,6 +28,7 @@ export class CapacityGraphComponent implements OnDestroy {
         this.chartOption = this.initChart(this.displayData);
       });
     this.chartOption = this.initChart(this.displayData);
+    this.selectedDateFormControl.valueChanges.subscribe(() => this.fetchNewCapacity());
   }
 
   ngOnDestroy(): void {
@@ -37,12 +38,6 @@ export class CapacityGraphComponent implements OnDestroy {
   setPickedDate(event: MatDatepickerInputEvent<Date>) {
     let selectedDate: Date = event.value ? event.value : this.todayDate;
     this.selectedDateFormControl.setValue(selectedDate);
-    this.capacitySubscription = this.capacityService
-      .getCapacityDataForDay$(selectedDate)
-      .subscribe((data) => {
-        this.displayData = this.convertCurrentArrayToDisplayData(data);
-        this.chartOption = this.initChart(this.displayData);
-      });
   }
 
   changeDate(amount: string) {
@@ -54,7 +49,21 @@ export class CapacityGraphComponent implements OnDestroy {
     } else {
       selectedDate.setDate(selectedDate.getDate() - 1);
     }
+    console.log(selectedDate)
     this.selectedDateFormControl.setValue(selectedDate);
+  }
+
+  fetchNewCapacity(){
+    let selectedDate: Date = this.selectedDateFormControl.value
+    ? this.selectedDateFormControl.value
+    : this.todayDate;
+
+    this.capacitySubscription = this.capacityService
+    .getCapacityDataForDay$(selectedDate)
+    .subscribe((data) => {
+      this.displayData = this.convertCurrentArrayToDisplayData(data);
+      this.chartOption = this.initChart(this.displayData);
+    });
   }
 
   private convertCurrentArrayToDisplayData(
