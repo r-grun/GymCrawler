@@ -19,7 +19,7 @@ export class CapacityGraphComponent implements OnDestroy {
   chartOption: EChartsOption;
   capacitySubscription: Subscription;
 
-  constructor(private capacityService: CapacityService, private _datepipe: DatePipe ) {
+  constructor(private capacityService: CapacityService) {
     this.selectedDateFormControl.setValue(this.todayDate);
     this.capacitySubscription = capacityService
       .getCapacityDataForDay$(this.todayDate)

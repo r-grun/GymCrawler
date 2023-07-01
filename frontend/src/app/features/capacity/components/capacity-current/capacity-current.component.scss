@@ -1,0 +1,43 @@
+.current-container {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+}
+
+.chart-container{
+    flex-grow: 1;
+}
+
+.current-chart {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.fraction-container{
+    flex-grow: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: larger;
+}
+
+
+.frac {
+    display: inline-block;
+    position: relative;
+    vertical-align: middle;
+    letter-spacing: 0.001em;
+    text-align: center;
+}
+.frac > span {
+    display: block;
+    padding: 0.1em;
+}
+.frac span.bottom {
+    border-top: thin solid black;
+}
+.frac span.symbol {
+    display: none;
+} 

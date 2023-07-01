@@ -37,28 +37,43 @@ export class CapacityService {
       .get<CurrentCapacity[]>(
         this.BACKEND_URL + this.PATH + formattedDate,
         httpOptions
-      ).pipe(
-        map(response => {
-          response.map(i => i.timestamp = new Date(i.timestamp.toString() + ' UTC'));
-          return response;
-        }),
       )
+      .pipe(
+        map((response) => {
+          response.map(
+            (i) => (i.timestamp = new Date(i.timestamp.toString() + ' UTC'))
+          );
+          return response;
+        })
+      );
 
     return req;
   }
 
-  public getLatestCapacity$(): Observable<CurrentCapacity> {
-    let res: CurrentCapacity = {
-      timestamp: new Date(testData[-1].timestamp),
-      centerId: testData[-1].centerId,
-      currentlyCheckedInCount: testData[-1].currentlyCheckedInCount,
-      maximumAllowedCheckedIn: testData[-1].maximumAllowedCheckedIn,
-      numberOfAvailableSpots: testData[-1].numberOfAvailableSpots,
-      numberOfReservedSpots: testData[-1].numberOfReservedSpots,
-      webName: testData[-1].webName,
-      status: testData[-1].status,
+  public getLatestCapacity$(): Observable<CurrentCapacity | undefined> {
+    let httpHeaders = new HttpHeaders();
+    httpHeaders
+      .append('Content-Type', 'application/json')
+      .append('Access-Control-Allow-Headers', 'Content-Type')
+      .append('Access-Control-Allow-Origin', '*');
+
+    const httpOptions = {
+      headers: httpHeaders,
     };
 
-    return of(res);
+    let req = this._httpClient
+      .get<CurrentCapacity[]>(this.BACKEND_URL + this.PATH, httpOptions)
+      .pipe(
+        map(capacity => capacity.at(0)),
+        map((capacity) => {
+          console.log(capacity)
+          if(capacity){
+          capacity.timestamp = new Date(capacity.timestamp.toString() + ' UTC');
+          }
+          return capacity;
+        })
+      );
+
+    return req;
   }
 }

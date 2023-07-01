@@ -23,6 +23,7 @@ import { CapacityGraphComponent } from './features/capacity/components/capacity-
 import { HttpClientModule } from '@angular/common/http';
 import { AppConfigService } from './core/services/app-config.service';
 import { DatePipe } from '@angular/common';
+import { CapacityCurrentComponent } from './features/capacity/components/capacity-current/capacity-current.component';
 
 export function setupAppConfigServiceFactory(
   service: AppConfigService
@@ -37,6 +38,7 @@ export function setupAppConfigServiceFactory(
     CapacityGraphComponent,
     BookingsComponent,
     HomeComponent,
+    CapacityCurrentComponent,
   ],
   imports: [
     NgxEchartsModule.forRoot({
