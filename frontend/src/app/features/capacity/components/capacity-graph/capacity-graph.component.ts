@@ -5,6 +5,7 @@ import { EChartsOption } from 'echarts';
 import { CapacityService } from '../../services/capacity.service';
 import { CurrentCapacity } from '../../models/current-capacity';
 import { Subscription } from 'rxjs';
+import { DatePipe } from '@angular/common';
 
 @Component({
   selector: 'app-capacity-graph',
@@ -14,11 +15,11 @@ import { Subscription } from 'rxjs';
 export class CapacityGraphComponent implements OnDestroy {
   todayDate = new Date(Date.now());
   selectedDateFormControl = new FormControl(this.todayDate);
-  displayData: Array<[Date, number]> = [];
+  displayData: Array<[Date, number, number]> = [];
   chartOption: EChartsOption;
   capacitySubscription: Subscription;
 
-  constructor(private capacityService: CapacityService) {
+  constructor(private capacityService: CapacityService, private _datepipe: DatePipe ) {
     this.selectedDateFormControl.setValue(this.todayDate);
     this.capacitySubscription = capacityService
       .getCapacityDataForDay$(this.todayDate)
@@ -58,24 +59,41 @@ export class CapacityGraphComponent implements OnDestroy {
 
   private convertCurrentArrayToDisplayData(
     capacities: CurrentCapacity[]
-  ): Array<[Date, number]> {
-    let timestampCapacities: Array<[Date, number]> = [];
+  ): Array<[Date, number, number]> {
+    let timestampCapacities: Array<[Date, number, number]> = [];
 
     capacities.forEach((capacity) => {
       timestampCapacities.push([
         capacity.timestamp,
         (capacity.currentlyCheckedInCount / capacity.maximumAllowedCheckedIn) *
           100,
+          capacity.currentlyCheckedInCount
       ]);
     });
 
     return timestampCapacities;
   }
 
-  private initChart(data: Array<[Date, number]>): EChartsOption {
+  private initChart(data: Array<[Date, number, number]>): EChartsOption {
     return {
       legend: {
         show: false,
+      },
+      tooltip: {
+        trigger: 'axis',
+        formatter: function (params: any) {
+          params = params[0];
+          let currentCheckedInCount = params.value[2];
+          let date = new Date(params.value[0]);
+          return (
+            currentCheckedInCount + ' checked in at' + 
+            date.getHours() + ':'+  date.getMinutes() + ':' + date.getSeconds()
+            
+          );
+        },
+        axisPointer: {
+          animation: false
+        }
       },
       xAxis: {
         type: 'time',
@@ -88,6 +106,7 @@ export class CapacityGraphComponent implements OnDestroy {
       visualMap: {
         top: 50,
         right: 10,
+        dimension: 1,
         pieces: [
           {
             lte: 40,

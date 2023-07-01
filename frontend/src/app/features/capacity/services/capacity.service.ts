@@ -11,7 +11,7 @@ import { DatePipe } from '@angular/common';
 })
 export class CapacityService {
   private BACKEND_URL: string;
-  private PATH = '/capacity/';
+  private PATH = 'capacity/';
 
   constructor(
     private _appConfig: AppConfigService,
@@ -22,12 +22,10 @@ export class CapacityService {
   }
 
   public getCapacityDataForDay$(date: Date): Observable<CurrentCapacity[]> {
-    let res = new Array<CurrentCapacity>();
     let httpHeaders = new HttpHeaders();
     httpHeaders
     .append('Content-Type', 'application/json')
     .append('Access-Control-Allow-Headers', 'Content-Type')
-    .append('Access-Control-Allow-Methods', 'GET')
     .append('Access-Control-Allow-Origin', '*');
 
     const httpOptions = {
@@ -37,35 +35,7 @@ export class CapacityService {
     let formattedDate = this._datepipe.transform(date, 'yyyy-MM-dd')
     let req = this._httpClient.get<CurrentCapacity[]>(this.BACKEND_URL + this.PATH + formattedDate, httpOptions);
 
-    req.subscribe(data => {
-      data.forEach((item) => {
-        res.push({
-          timestamp: new Date(item.timestamp),
-          centerId: item.centerId,
-          currentlyCheckedInCount: item.currentlyCheckedInCount,
-          maximumAllowedCheckedIn: item.maximumAllowedCheckedIn,
-          numberOfAvailableSpots: item.numberOfAvailableSpots,
-          numberOfReservedSpots: item.numberOfReservedSpots,
-          webName: item.webName,
-          status: item.status,
-        });
-      });
-    })
-
-    // testData.forEach((item) => {
-    //   res.push({
-    //     timestamp: new Date(item.timestamp),
-    //     centerId: item.centerId,
-    //     currentlyCheckedInCount: item.currentlyCheckedInCount,
-    //     maximumAllowedCheckedIn: item.maximumAllowedCheckedIn,
-    //     numberOfAvailableSpots: item.numberOfAvailableSpots,
-    //     numberOfReservedSpots: item.numberOfReservedSpots,
-    //     webName: item.webName,
-    //     status: item.status,
-    //   });
-    // });
-
-    return of(res);
+    return req
   }
 
   public getLatestCapacity$(): Observable<CurrentCapacity> {
