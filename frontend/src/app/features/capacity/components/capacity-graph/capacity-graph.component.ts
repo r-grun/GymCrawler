@@ -5,7 +5,7 @@ import { EChartsOption } from 'echarts';
 import { CapacityService } from '../../services/capacity.service';
 import { CurrentCapacity } from '../../models/current-capacity';
 import { Subscription } from 'rxjs';
-import { DatePipe } from '@angular/common';
+import { DatePipe, formatDate } from '@angular/common';
 
 @Component({
   selector: 'app-capacity-graph',
@@ -86,8 +86,8 @@ export class CapacityGraphComponent implements OnDestroy {
           let currentCheckedInCount = params.value[2];
           let date = new Date(params.value[0]);
           return (
-            currentCheckedInCount + ' checked in at' + 
-            date.getHours() + ':'+  date.getMinutes() + ':' + date.getSeconds()
+            currentCheckedInCount + ' checked in at ' + 
+            date.getHours() + ':'+  date.getMinutes()
             
           );
         },
@@ -97,6 +97,12 @@ export class CapacityGraphComponent implements OnDestroy {
       },
       xAxis: {
         type: 'time',
+        axisLabel:{
+          formatter: function (param: any){
+            let date = new Date(param);
+            return formatDate(date.toString(), 'HH:mm', 'en-US')
+          }
+        }
       },
       yAxis: {
         type: 'value',

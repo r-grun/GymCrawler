@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import testData from './checkin_test.json';
 import { CurrentCapacity } from '../models/current-capacity';
-import { Observable, of } from 'rxjs';
+import { Observable, map, mergeMap, of } from 'rxjs';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { AppConfigService } from 'src/app/core/services/app-config.service';
 import { DatePipe } from '@angular/common';
@@ -24,18 +24,27 @@ export class CapacityService {
   public getCapacityDataForDay$(date: Date): Observable<CurrentCapacity[]> {
     let httpHeaders = new HttpHeaders();
     httpHeaders
-    .append('Content-Type', 'application/json')
-    .append('Access-Control-Allow-Headers', 'Content-Type')
-    .append('Access-Control-Allow-Origin', '*');
+      .append('Content-Type', 'application/json')
+      .append('Access-Control-Allow-Headers', 'Content-Type')
+      .append('Access-Control-Allow-Origin', '*');
 
     const httpOptions = {
-      headers: httpHeaders
+      headers: httpHeaders,
     };
 
-    let formattedDate = this._datepipe.transform(date, 'yyyy-MM-dd')
-    let req = this._httpClient.get<CurrentCapacity[]>(this.BACKEND_URL + this.PATH + formattedDate, httpOptions);
+    let formattedDate = this._datepipe.transform(date, 'yyyy-MM-dd');
+    let req = this._httpClient
+      .get<CurrentCapacity[]>(
+        this.BACKEND_URL + this.PATH + formattedDate,
+        httpOptions
+      ).pipe(
+        map(response => {
+          response.map(i => i.timestamp = new Date(i.timestamp.toString() + ' UTC'));
+          return response;
+        }),
+      )
 
-    return req
+    return req;
   }
 
   public getLatestCapacity$(): Observable<CurrentCapacity> {
