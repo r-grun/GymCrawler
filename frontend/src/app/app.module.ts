@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { APP_INITIALIZER, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -20,6 +20,15 @@ import {MatInputModule} from '@angular/material/input';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NgxEchartsModule } from 'ngx-echarts';
 import { CapacityGraphComponent } from './features/capacity/components/capacity-graph/capacity-graph.component';
+import { HttpClientModule } from '@angular/common/http';
+import { AppConfigService } from './core/services/app-config.service';
+import { DatePipe } from '@angular/common';
+
+export function setupAppConfigServiceFactory(
+  service: AppConfigService
+): Function {
+  return () => service.load$();
+}
 
 @NgModule({
   declarations: [
@@ -52,12 +61,22 @@ import { CapacityGraphComponent } from './features/capacity/components/capacity-
     MatNativeDateModule,
     MatInputModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [
     MatDatepickerModule,
     MatNativeDateModule,
+    DatePipe,
     {provide: MAT_DATE_LOCALE, useValue: 'de-DE'},
+    {
+      provide: APP_INITIALIZER,
+      useFactory: setupAppConfigServiceFactory,
+      deps: [
+          AppConfigService
+      ],
+      multi: true
+  }
   ],
   bootstrap: [AppComponent],
 })
