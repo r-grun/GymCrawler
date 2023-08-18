@@ -74,7 +74,7 @@ export class CapacityGraphComponent implements OnDestroy {
     capacities.forEach((capacity) => {
       timestampCapacities.push([
         capacity.timestamp,
-        (capacity.currentlyCheckedInCount / capacity.maximumAllowedCheckedIn) *
+        (capacity.currentlyCheckedInCount / (capacity.maximumAllowedCheckedIn - 160)) *
           100,
           capacity.currentlyCheckedInCount
       ]);
@@ -92,11 +92,12 @@ export class CapacityGraphComponent implements OnDestroy {
         trigger: 'axis',
         formatter: function (params: any) {
           params = params[0];
+          let currentCheckedInPercentage = Math.round(params.value[1]);
           let currentCheckedInCount = params.value[2];
           let date = new Date(params.value[0]);
           return (
-            currentCheckedInCount + ' checked in at ' + 
-            date.getHours() + ':'+  date.getMinutes()
+            currentCheckedInCount + ' ' + '('+ currentCheckedInPercentage +'%) checked in at ' + 
+            date.getHours() + ':'+  ( (date.getMinutes()<10?'0':'') + date.getMinutes() )
             
           );
         },
