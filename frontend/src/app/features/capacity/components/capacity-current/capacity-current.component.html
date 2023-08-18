@@ -2,6 +2,11 @@
     <div class="chart-container">
         <div echarts [options]="chartOption" class="current-chart"></div>
     </div>
+    <div class="percentage-container" *ngIf="currentCapacity">
+        <div class="percentage">
+            {{capacityPercentage}}%
+        </div>
+    </div>
     <div class="fraction-container" *ngIf="currentCapacity">
         <div class="frac">
             <span> {{currentCapacity.currentlyCheckedInCount}}</span>

@@ -25,13 +25,15 @@
                 </button>
             </div>
             <div class="overview">
-                <div class="current-capacity overview-item">
-                    <app-capacity-current></app-capacity-current>
-                </div>
-                <div class="time-next-visit overview-item">
-                    TODO: Add time, when next visit is recommended (capacity is under 70 or 40% next time)(from new
-                    shared component) here. Same as on dashboard
-                </div>
+                    <fieldset class="current-capacity overview-item">
+                        <legend>Current</legend>
+                        <app-capacity-current></app-capacity-current>
+                    </fieldset>
+                    <fieldset class="time-next-visit overview-item">
+                        <legend>Next Visit</legend>
+                        TODO: Add time, when next visit is recommended (capacity is under 70 or 40% next time)(from new
+                        shared component) here. Same as on dashboard
+                    </fieldset>
             </div>
         </div>
         <mat-divider></mat-divider>

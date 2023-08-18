@@ -15,6 +15,15 @@
     justify-content: center;
 }
 
+.percentage-container{
+    flex-grow: 1;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    font-size: x-large;
+}
+
 .fraction-container{
     flex-grow: 2;
     display: flex;
@@ -22,7 +31,6 @@
     justify-content: center;
     font-size: larger;
 }
-
 
 .frac {
     display: inline-block;

@@ -11,6 +11,7 @@ import { EChartsOption } from 'echarts';
 })
 export class CapacityCurrentComponent implements OnDestroy {
   currentCapacity: CurrentCapacity | undefined;
+  capacityPercentage: number = 0;
   chartOption: EChartsOption;
 
   private capacitySubscription: Subscription;
@@ -20,6 +21,8 @@ export class CapacityCurrentComponent implements OnDestroy {
       .getLatestCapacity$()
       .subscribe((data) => {
         this.currentCapacity = data;
+        if (this.currentCapacity)
+          this.capacityPercentage = this.calculateCapacityPercentage(this.currentCapacity);
         this.chartOption = this.initChart();
       });
     this.chartOption = this.initChart();
@@ -27,6 +30,11 @@ export class CapacityCurrentComponent implements OnDestroy {
 
   ngOnDestroy(): void {
     this.capacitySubscription.unsubscribe();
+  }
+
+  private calculateCapacityPercentage(currentCapacity: CurrentCapacity): number{
+    return Math.round( (currentCapacity.currentlyCheckedInCount / (currentCapacity.maximumAllowedCheckedIn - 160)) *
+    100);
   }
 
   private initChart(): EChartsOption {
