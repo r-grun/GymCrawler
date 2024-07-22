@@ -7,10 +7,16 @@
             {{capacityPercentage}}%
         </div>
     </div>
-    <div class="fraction-container" *ngIf="currentCapacity">
-        <div class="frac">
+    <div class="numbers-container" *ngIf="currentCapacity">
+        <div class="numbers-element">
+            <mat-icon fontIcon="person"></mat-icon>
             <span> {{currentCapacity.currentlyCheckedInCount}}</span>
-            <span class="symbol">/</span>
+        </div>
+        <div class="numbers-element">
+            <div class="icon">
+                <mat-icon fontIcon="groups"></mat-icon>
+                <div class="icon-label">max</div>
+            </div>
             <span class="bottom">{{currentCapacity.maximumAllowedCheckedIn}}</span>
         </div>
     </div>

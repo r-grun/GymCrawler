@@ -6,13 +6,14 @@
 
 .chart-container{
     flex-grow: 1;
+    margin-left: -30px;
 }
 
 .current-chart {
     height: 100%;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-end;
 }
 
 .percentage-container{
@@ -20,32 +21,35 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     font-size: x-large;
 }
 
-.fraction-container{
-    flex-grow: 2;
+.numbers-container{
+    flex-grow: 1;
     display: flex;
+    flex-direction: column;
+    font-size: large;
+    justify-content: space-around;
     align-items: center;
-    justify-content: center;
-    font-size: larger;
-}
 
-.frac {
-    display: inline-block;
-    position: relative;
-    vertical-align: middle;
-    letter-spacing: 0.001em;
-    text-align: center;
+    .numbers-element {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+    }
+
+    .icon {
+        display: flex;
+        flex-direction: column;
+
+        .icon-label {
+            display: flex;
+            justify-content: center;
+            font-size: x-small;
+            vertical-align: top;
+            margin-top: -10px;
+        }
+    }
+
 }
-.frac > span {
-    display: block;
-    padding: 0.1em;
-}
-.frac span.bottom {
-    border-top: thin solid black;
-}
-.frac span.symbol {
-    display: none;
-} 
