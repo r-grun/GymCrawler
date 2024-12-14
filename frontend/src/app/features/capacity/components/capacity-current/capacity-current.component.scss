@@ -1,7 +1,8 @@
 .current-container {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     height: 100%;
+    color: #0000008a;
 }
 
 .chart-container{
@@ -16,22 +17,21 @@
     justify-content: flex-end;
 }
 
-.percentage-container{
-    flex-grow: 1;
+.total-container{
+    flex-grow: 2;
     display: flex;
     flex-direction: row;
-    align-items: center;
-    justify-content: flex-start;
-    font-size: x-large;
-}
-
-.numbers-container{
-    flex-grow: 1;
-    display: flex;
-    flex-direction: column;
     font-size: large;
-    justify-content: space-around;
     align-items: center;
+    justify-content: space-around;
+
+    .total{
+        font-size: xxx-large;
+    }
+
+    .max{
+        margin-left: 1em;
+    }
 
     .numbers-element {
         display: flex;
@@ -51,5 +51,40 @@
             margin-top: -10px;
         }
     }
+}
 
+.relative-container {
+    .percentage{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-end;
+        font-size: small;
+    }
+}
+
+.mat-mdc-progress-bar.occupancy-progress-bar {
+    &.red{
+        --mdc-linear-progress-active-indicator-color: #D32F2F; //progress bar color
+    }
+
+    &.yellow{
+        --mdc-linear-progress-active-indicator-color: #FFA000; //progress bar color
+    }
+
+    &.green{
+        --mdc-linear-progress-active-indicator-color: #4CAF50; //progress bar color
+    }
+}
+
+.red {
+    color: #D32F2F;
+}
+
+.yellow {
+    color: #FFA000;
+}
+
+.green {
+    color: #4CAF50;
 }

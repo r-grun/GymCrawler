@@ -1,23 +1,25 @@
-<div class="current-container">
-    <div class="chart-container">
-        <div echarts [options]="chartOption" class="current-chart"></div>
-    </div>
-    <div class="percentage-container" *ngIf="currentCapacity">
-        <div class="percentage">
-            {{capacityPercentage}}%
-        </div>
-    </div>
-    <div class="numbers-container" *ngIf="currentCapacity">
-        <div class="numbers-element">
+<div class="current-container" *ngIf="currentCapacity">
+    <div class="total-container">
+        <div class="total numbers-element"
+             [ngClass]="{'red': capacityPercentage >= 70, 'yellow': capacityPercentage < 70 && capacityPercentage > 40, 'green': capacityPercentage <= 40}"
+        >
             <mat-icon fontIcon="person"></mat-icon>
-            <span> {{currentCapacity.currentlyCheckedInCount}}</span>
+            <span> {{ currentCapacity.currentlyCheckedInCount }}</span>
         </div>
-        <div class="numbers-element">
+        <div class="max numbers-element">
             <div class="icon">
                 <mat-icon fontIcon="groups"></mat-icon>
                 <div class="icon-label">max</div>
             </div>
-            <span class="bottom">{{currentCapacity.maximumAllowedCheckedIn}}</span>
+            <span class="bottom">{{ currentCapacity.maximumAllowedCheckedIn }}</span>
         </div>
+    </div>
+    <div class="relative-container">
+        <div class="percentage">
+            {{ capacityPercentage }}% occupied
+        </div>
+        <mat-progress-bar class="occupancy-progress-bar" mode="determinate" value="{{capacityPercentage}}"
+                          [ngClass]="{'red': capacityPercentage >= 70, 'yellow': capacityPercentage < 70 && capacityPercentage > 40, 'green': capacityPercentage <= 40}"
+        ></mat-progress-bar>
     </div>
 </div>
